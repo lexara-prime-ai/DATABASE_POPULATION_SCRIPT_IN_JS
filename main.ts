@@ -20,8 +20,8 @@ class DB_OPERATIONS {
     });
 
     /* Accessible fields */
-    TOKEN: string = "YOUR_TOKEN";
-    URL = new URL("https://localhost:5001/resources");
+    TOKEN: string = "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImZ1bGxOYW1lIjoiU3lzdGVtIEFjY291bnQiLCJlbWFpbCI6InJ1bS1zeXN0ZW1AdGhoLWxsYy5jb20iLCJyb2xlIjoiU3VwZXIgQWRtaW4iLCJleHAiOjE3MDQ4ODU2NTh9.2iCcrPoD8qaGgqakrw0elzNTeRV2i03mza5kdQVkLWRZiWYN31kuSW2ffhzdVTJFzpWnv0vCaBD7jtzZydxboA";
+    URL = new URL("https://127.0.0.1:5001/resources");
 
     async SEED_DATA() {
         try {
@@ -33,34 +33,9 @@ class DB_OPERATIONS {
                     firstName: faker.person.firstName(),
                     lastName: faker.person.lastName(),
                     email: faker.internet.email(),
-                    /* 
-                    
-                    Implement Ids using an array in future releases e.g 
-                
-                        let resourceTypeIds: string[] = [
-                            '9c480954-f4a0-4560-ae87-9da1bf47a676', 
-                            '45b8224f-97b5-4fc1-810f-43e6fe94a87d',
-                            '4e5bbade-a8da-4afb-a397-dd13b3ef20b9'
-                        ]
-    
-                        let resourceLevelds: string[] = [
-                            '9c480954-f4a0-4560-ae87-9da1bf47a676', 
-                            '45b8224f-97b5-4fc1-810f-43e6fe94a87d',
-                            '4e5bbade-a8da-4afb-a397-dd13b3ef20b9'
-                        ]
-    
-                        let locationIds: string[] = [
-                            '9c480954-f4a0-4560-ae87-9da1bf47a676', 
-                            '45b8224f-97b5-4fc1-810f-43e6fe94a87d',
-                            '4e5bbade-a8da-4afb-a397-dd13b3ef20b9'
-                        ]
-    
-                    Then set the current value on iteration.
-    
-                    */
+                    solutionDeliveryLeaderID: "f53ef60c-b96c-4e70-8fda-7b56201517cb",
                     resourceTypeId: "9c480954-f4a0-4560-ae87-9da1bf47a676",
-                    resourceLevelId: "3b56aa69-82d9-4953-8283-888fdd7d7896",
-                    locationId: "092ca8fb-edd0-4cb7-9e45-e7af50a8aabf",
+                    resourceLevelId: "3b56aa69-82d9-4953-8283-888fdd7d7896"
                 };
 
                 /* Response format */
@@ -75,7 +50,7 @@ class DB_OPERATIONS {
                 console.log(`RESPONSE STATUS: ${respose.status}`);
             }
         } catch (error) {
-            console.log(`ERROR:, ${error.Message}`);
+            console.log(`ERROR: ${error.message}`);
         }
     }
 }
