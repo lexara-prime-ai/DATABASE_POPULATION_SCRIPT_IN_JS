@@ -20,7 +20,7 @@ class DB_OPERATIONS {
     });
 
     /* Accessible fields */
-    TOKEN: string = "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN5c3RlbSIsImZ1bGxOYW1lIjoiU3lzdGVtIEFjY291bnQiLCJlbWFpbCI6InJ1bS1zeXN0ZW1AdGhoLWxsYy5jb20iLCJyb2xlIjoiU3VwZXIgQWRtaW4iLCJleHAiOjE3MDQ4ODU2NTh9.2iCcrPoD8qaGgqakrw0elzNTeRV2i03mza5kdQVkLWRZiWYN31kuSW2ffhzdVTJFzpWnv0vCaBD7jtzZydxboA";
+    TOKEN: string = "YOUR_TOKEN";
     URL = new URL("https://127.0.0.1:5001/resources");
 
     async SEED_DATA() {
